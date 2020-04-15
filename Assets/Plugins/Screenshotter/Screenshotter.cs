@@ -286,7 +286,7 @@ namespace SkatanicStudios
             depthOfField.nearFocusEnd.Override(nearEnd);
             depthOfField.farFocusStart.Override(farStart);
             depthOfField.farFocusEnd.Override(farEnd);
-            */
+            
 #elif UNITY_URP || UNITY_BUILT_IN
                 focusDistance += vertical * speed;
                 focalLength += horizontal * speed;
