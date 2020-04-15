@@ -12,5 +12,10 @@
     ],
     "dependencies":{
         "com.unity.inputsystem":"1.0.0-preview.4"
+    },
+    "author": {
+    "name": "Matt Gambell",
+    "email": "matt@skatanicstudios.co.uk",
+    "url": "https://www.skatanicstudios.co.uk"
     }
 }
