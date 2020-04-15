@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.Rendering;
 
-namespace SkatanicStudios.Screenshotter
-{
+
     [InitializeOnLoad]
     public class ScreenshotterPipelineType
     {
@@ -107,4 +106,4 @@ namespace SkatanicStudios.Screenshotter
         }
 
     }
-}
+
