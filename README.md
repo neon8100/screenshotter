@@ -1,6 +1,7 @@
 # Screenshotter
 
-## About
+![Screenshotter Logo](http://www.skatanicstudios.co.uk/wp-content/uploads/2020/04/logo.jpg)
+
 #### Package for taking gameplay screenshots in the Unity Editor across all three pipeline types.
 
 Screenshotter is a simple Camera controller plug-in for Unity that is designed to make the process of gameplay screenshots fast, easy and flexible! It allows you to fly around your scene with a game-pad to line-up a shot and adjust a Depth of Field post-process on the camera without interacting with controls in the editor.
