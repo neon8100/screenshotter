@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.Rendering;
 
-
+namespace SkatanicStudios
+{
     [InitializeOnLoad]
     public class ScreenshotterPipelineType
     {
@@ -45,7 +46,7 @@ using UnityEngine.Rendering;
 #endif
             // no SRP
             return PipelineType.BuiltIn;
-        
+
         }
 
         //Set the build defines
@@ -53,7 +54,7 @@ using UnityEngine.Rendering;
         {
 
             EditorApplication.update += SetPipelineType;
-            
+
 
         }
 
@@ -83,7 +84,7 @@ using UnityEngine.Rendering;
                     Debug.Log("Screenshotter Set to High Definition");
                     if (!defines.Contains(DEFINE_HDRP))
                     {
-                        defines += (isEmpty) ? DEFINE_HDRP : ";" + DEFINE_HDRP; 
+                        defines += (isEmpty) ? DEFINE_HDRP : ";" + DEFINE_HDRP;
                     }
                     break;
                 case PipelineType.Universal:
@@ -106,4 +107,5 @@ using UnityEngine.Rendering;
         }
 
     }
+}
 
