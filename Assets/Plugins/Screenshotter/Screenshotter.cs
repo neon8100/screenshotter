@@ -66,12 +66,13 @@ namespace SkatanicStudios
 
             depthOfField = volume.profile.Add<DepthOfField>(true);
 #if UNITY_HDRP
-        //HDRP// depthOfField.focusMode.Override(DepthOfFieldMode.Manual);
+            depthOfField.focusMode.Override(DepthOfFieldMode.Manual);
 #elif UNITY_URP
+
             depthOfField.mode.Override(DepthOfFieldMode.Bokeh);
 #endif
 #elif UNITY_BUILT_IN
-        gameObject.layer = LayerMask.NameToLayer("PostProcessing");
+            gameObject.layer = LayerMask.NameToLayer("PostProcessing");
 
         layer = gameObject.AddComponent<PostProcessLayer>();
         layer.volumeLayer.value = LayerMask.GetMask("PostProcessing");
