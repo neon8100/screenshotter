@@ -3,5 +3,18 @@
     "displayName":"Screenshotter",
     "version":"1.0.0",
     "unity":"2019.1",
-    "description":"Tool for taking promotional screen-shots in the Unity Editor using a Gamepad."
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/neon8100/screenshotter#upm"
+    },
+    "description":"Tool for taking promotional screen-shots in the Unity Editor using a Gamepad.",
+    "keywords":[
+        "screenshot", 
+        "input",
+        "gamepad",
+        "camera"
+    ],
+    "dependencies":{
+        "com.unity.inputsystem":"1.0.0-preview.4"
+    }
 }
