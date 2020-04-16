@@ -34,6 +34,7 @@ namespace SkatanicStudios
 #endif
 
         public bool invertLook;
+        public bool gameViewScreenshot = true;
         public Vector2Int screenShotResolution = new Vector2Int(1920, 1080);
         public Color debugTextColor = Color.yellow;
         public int debugFontSize = 30;
@@ -364,32 +365,41 @@ namespace SkatanicStudios
 
         public void TakeNewScreenshot(string fullPath)
         {
-            if (camera == null)
-            {
-                camera = GetComponent<Camera>();
-            }
 
-            RenderTexture rt = new RenderTexture(screenShotResolution.x, screenShotResolution.y, 24);
-            camera.targetTexture = rt;
-            Texture2D screenShot = new Texture2D(screenShotResolution.x, screenShotResolution.y, TextureFormat.RGBA32, false);
-            camera.Render();
-            RenderTexture.active = rt;
-            screenShot.ReadPixels(new Rect(0, 0, screenShotResolution.x, screenShotResolution.y), 0, 0);
-            camera.targetTexture = null;
-            RenderTexture.active = null; //added to avoid errors
-
-            if (Application.isEditor)
+            if (gameViewScreenshot)
             {
-                DestroyImmediate(rt);
+                ScreenCapture.CaptureScreenshot(fullPath);
             }
             else
             {
-                Destroy(rt);
+                if (camera == null)
+                {
+                    camera = GetComponent<Camera>();
+                }
+
+                RenderTexture rt = new RenderTexture(screenShotResolution.x, screenShotResolution.y, 24);
+                camera.targetTexture = rt;
+                Texture2D screenShot = new Texture2D(screenShotResolution.x, screenShotResolution.y, TextureFormat.RGBA32, false);
+                camera.Render();
+                RenderTexture.active = rt;
+                screenShot.ReadPixels(new Rect(0, 0, screenShotResolution.x, screenShotResolution.y), 0, 0);
+                camera.targetTexture = null;
+                RenderTexture.active = null; //added to avoid errors
+
+                if (Application.isEditor)
+                {
+                    DestroyImmediate(rt);
+                }
+                else
+                {
+                    Destroy(rt);
+                }
+
+                byte[] bytes = screenShot.EncodeToPNG();
+
+                System.IO.File.WriteAllBytes(fullPath, bytes);
             }
 
-            byte[] bytes = screenShot.EncodeToPNG();
-
-            System.IO.File.WriteAllBytes(fullPath, bytes);
             Debug.Log(string.Format("Took screenshot to: {0}", fullPath));
         }
 
