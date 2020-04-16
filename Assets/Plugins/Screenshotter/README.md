@@ -32,6 +32,11 @@ The screenshotter camera is designed primarily to work with an Xbox controller, 
  - A: Change Mode
  - Y: Toggle Debug Text
  - L3 (Click Left Stick In): Toggle Speed 
+ - Right Trigger: Zoom In
+ - Left Trigger: Zoom Out
+ - Right Bumper: Camera Up
+ - Left Bumper: Camera Down
+ 
  
 *Move Mode*
  - Left Stick  - Move
