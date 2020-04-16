@@ -13,6 +13,7 @@ Screenshotter is a simple Camera controller plug-in for Unity that is designed t
   * Cross-Compatible with Built-In/URP/HDRP Renderers
 
 ## Installation
+**Walkthrough Video**
 [![Walkthrough Video](https://img.youtube.com/vi/frMOMNGxbN0/0.jpg)](https://www.youtube.com/watch?v=frMOMNGxbN0)
 
 Simply open the package manager in Unity, choose the (+) sign and choose "Add Package From Git URL" and enter the url https://github.com/neon8100/screenshotter.git
