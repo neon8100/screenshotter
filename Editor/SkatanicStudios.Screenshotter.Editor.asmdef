@@ -1,0 +1,18 @@
+{
+    "name": "SkatanicStudios.Screenshotter.Editor",
+    "references": [
+        "GUID:daea80753b950b3428c609876a5b28b1",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
